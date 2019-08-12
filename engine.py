@@ -15,7 +15,7 @@ class BetaZero:
         self.actions = []*self.g.getActionSize()
 
     def get_beta(self):
-        return 1-(log(1+self.game_num)/10.0)
+        return 1-(log(1+self.game_num)/8.0)
 
     def get_move(self):
         rand = self.get_beta()
@@ -38,6 +38,7 @@ class BetaZero:
     def choose_nn_move(self):
         board = np.expand_dims(self.board,axis=0)
         pi = self.model.predict(board)
+        print(pi)
         return np.argmax(pi)
 
     def set_board(self,board,actions):
