@@ -17,7 +17,7 @@ p2_actions = []
 winners = []
 p1w = 0
 p2w = 0
-for i in range(10):
+for i in range(100):
     for i in range(100):
         p1b = []
         p1a = []
@@ -61,5 +61,5 @@ for i in range(10):
     p2.model.fit(x=[p2_boards],y=[p2_actions],epochs=10)
     p1.set_game_num(p1w)
     p2.set_game_num(p2w)
-p1.model.save("checkpoint_p1")
-p2.model.save("checkpoint_p2")
+p1.model.save("checkpoint1_p1")
+p2.model.save("checkpoint1_p2")
